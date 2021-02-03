@@ -48,9 +48,10 @@ class Channel(object):
         self.supported.add((content_type, supported_input_mode, supported_s3_data_distribution_type))
 
     def validate(self, value):
-        """Validate the provided configuration against the channel's supported configuration."""
-        if (value[CONTENT_TYPE], value[TRAINING_INPUT_MODE], value[S3_DIST_TYPE]) not in self.supported:
-            raise exc.UserError("Channel configuration for '{}' channel is not supported: {}".format(self.name, value))
+        return
+        #"""Validate the provided configuration against the channel's supported configuration."""
+        #if (value[CONTENT_TYPE], value[TRAINING_INPUT_MODE], value[S3_DIST_TYPE]) not in self.supported:
+        #    raise exc.UserError("Channel configuration for '{}' channel is not supported: {}".format(self.name, value))
 
 
 class Channels(object):
